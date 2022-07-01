@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="home.css">
+  <script>
+
+    function add() {
+      let li = document.createElement('LI');
+      let input_value = document.form_main.task.value;
+      let input_text = document.createTextNode(input_value);
+
+      li.appendChild(input_text);
+      document.querySelector('ul').appendChild(li);
+      document.form_main.task.value = "";
+
+      createCloseButton(li);
+    }
+
+    function createCloseButton(li) {
+      let span = document.createElement("SPAN");
+      let txt = document.createTextNode("\u00D7");
+
+      span.className = "close";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      span.onclick = () => span.parentElement.style.display = "none";
+    }
+    document.querySelectorAll('li').forEach(createCloseButton);
+
+    document.querySelector('ul').addEventListener('click', (e) => {
+      if (e.target.tagName === 'LI')
+        e.target.classList.toggle('checked');
+    });
+  </script>
+</head>
+
+<body>
+  <div id="box1">
+    <form name="form_main">
+      <label for="task" id='novaTarefa'>Tarefa: </label>
+      <input type="text" name="task" id="task" /> <br />
+      <button type="button" onclick="add()" id="botao">Add</button>
+    </form>
+
+    <fieldset id='box2'>
+      <legend id='titulo'>Tarefas:</legend>
+      <ul id='lista'>
+
+      </ul>
+    </fieldset>
+  </div>
+</body>
+
+</html>
+<!--fazer a caixa almentar, fazer o box1 almentar para baixo de acordo com a quntidade de tarefas-->

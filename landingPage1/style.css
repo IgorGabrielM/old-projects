@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@1,300&display=swap');   
+
+header{
+    background: linear-gradient(-45deg, rgb(245, 246, 255), rgb(193, 145, 255), rgb(245, 246, 255));
+    background-size: 300% 300%;
+    border-style: solid;
+    border-color: rgb(193, 145, 255);
+    font-family: 'Bebas Neue', cursive;
+}
+header:hover{
+    animation: gradient 5s ease infinite;
+}
+@keyframes gradient{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+body{
+    background: linear-gradient(to right, rgb(193, 145, 255), rgb(245, 246, 255));
+}
+#logo{
+    margin-left: 2%;
+    max-width: 8%;
+}
+.cabecalho{
+    margin-left: 12%;
+    font-size: 220%;
+    text-decoration: none;
+    display: inline-block;
+}
+.cabecalho:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+#subtitulo{
+    font-family: 'Chivo', sans-serif;   
+    position: absolute;
+    margin-top: 9%;
+    margin-left: 8%;
+    font-size: 150%;
+    color: rgb(245, 246, 255);
+}
+#titulo{
+    font-family: 'Chivo', sans-serif;
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 8%;
+    font-size: 500%;
+}
+#Dgrandes, #Dmedios, #Dpequenos{
+    font-family: 'Roboto Mono', monospace;
+}
+.cards{
+    display: flex;
+    font-family: 'Ubuntu', sans-serif;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+@-webkit-keyframes flip-horizontal-fwd {
+    0% {
+      -webkit-transform: translateZ(0) rotateX(0);
+              transform: translateZ(0) rotateX(0);
+    }
+    100% {
+      -webkit-transform: translateZ(160px) rotateX(-180deg);
+              transform: translateZ(160px) rotateX(-180deg);
+    }
+  }
+  @keyframes flip-horizontal-fwd {
+    0% {
+      transform: translateZ(0) rotateX(0);
+    }
+    100% {
+      transform: translateZ(160px) rotateX(-180deg);    
+    }
+  }
+.card1{
+    position: absolute;
+    border-style: solid;
+    border-radius: 15%;
+    border-color: transparent;
+    background-color: rgb(245, 246, 255);
+    margin-right: 60%;
+    margin-left: 20%;
+    margin-top: 35%;
+    text-align: center;
+}
+.card1:hover{
+    background-image: url(imagens/droneGrande.png); 
+    background-size: 100%;
+    color: rgba(240, 248, 255, 0);
+    transition: 0.5s;
+    box-shadow: 0 3px 25px rgb(22, 13, 21);
+    animation: flip-horizontal-fwd 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+.card2{
+    position: absolute;
+    background-size: 100%;
+    border-style: solid;
+    border-radius: 15%;
+    border-color: transparent;
+    background-color: rgb(245, 246, 255);
+    margin-right: 40%;
+    margin-left: 40%;
+    margin-top: 35%;
+    text-align: center;
+}
+.card2:hover{
+    background-image: url(imagens/droneMedio.jpeg);
+    color: rgba(240, 248, 255, 0);
+    transition: 0.5s;
+    box-shadow: 0 3px 25px rgb(22, 13, 21);
+    animation: flip-horizontal-fwd 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+.card3{
+    position: absolute;
+    background-size: 100%;
+    border-style: solid;
+    border-radius: 15%;
+    border-color: transparent;
+    background-color: rgb(245, 246, 255);
+    margin-right: 20%;
+    margin-left: 60%;
+    margin-top: 35%;
+    text-align: center;
+}
+.card3:hover{
+    background-image: url(imagens/dronePequeno.png);
+    color: rgba(240, 248, 255, 0);
+    transition: 0.55s;
+    box-shadow: 0 3px 25px rgb(22, 13, 21);
+    animation: flip-horizontal-fwd 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@keyframes fly{
+    0% {
+        transform: translateX(0);
+    }
+    50%{
+        transform: translatey(calc(-10vw));
+    }
+    100%{
+        transform: translateX(calc(100vw));
+    }
+}
+@keyframes flyStatic{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translatey(calc(-10vw));
+    }
+}
+.sol, .lua{
+    max-width: 2%;
+    position: absolute;
+    margin-bottom: 50%;
+    margin-left: 96%;
+}
+#droneFundo:hover{
+    animation: fly 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#droneFundo{
+    animation: flyStatic 2s infinite;
+    animation-direction: alternate;
+    position: absolute;
+    max-width: 50%;
+    margin-top: 65%;
+}
+#paisagem{
+    border-radius: 100%;
+    width: 40%;
+    margin-top: 72%;
+    margin-left: 5%
+}
+#txtCorpo{
+    font-family: 'Roboto Mono', monospace;
+    position: absolute;
+    margin-left: 60%;
+    margin-right: 10%;
+    margin-top: 65%;
+    font-size: 150%;
+    text-align: right;
+}
+.redes{
+  width: 50px;
+  height: 50px;
+}
+footer{
+  margin-top: 50%;
+  margin-left: 40% 
+}
+@media(max-width:600px){
+    #logo{
+        margin-left: 2%;
+        max-width: 15%;
+    }
+    .sol, .lua{
+        max-width: 10%;
+        position: absolute;
+        margin-top: 38%;
+        margin-left: 75%;
+    }
+    .cabecalho{
+        margin-left: 12%;
+        font-size: 150%;
+        text-decoration: none;
+        display: inline-block;
+    }
+    #subtitulo{
+        font-family: 'Chivo', sans-serif;   
+        position: absolute;
+        margin-top: 7%;
+        margin-left: 8%;
+        font-size: 100%;
+        color: rgb(245, 246, 255);
+    }
+    #titulo{
+        font-family: 'Chivo', sans-serif;
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 8%;
+        font-size: 250%;
+    }
+    .card1{
+        position: absolute;
+        border-style: solid;
+        border-radius: 15%;
+        border-color: transparent;
+        background-color: rgb(245, 246, 255);
+        margin-right: 3%;
+        margin-left: 0%;
+        margin-top: 65%;
+        text-align: center;
+        font-size: 100%;
+    }
+    .card2{
+        position: absolute;
+        background-size: 100%;
+        border-style: solid;
+        border-radius: 15%;
+        border-color: transparent;
+        background-color: rgb(245, 246, 255);
+        margin-right: 3%;
+        margin-left: 0%;
+        margin-top: 135%;
+        text-align: center;
+        font-size: 100%;
+    }
+    .card3{
+        position: absolute;
+        background-size: 100%;
+        border-style: solid;
+        border-radius: 15%;
+        border-color: transparent;
+        background-color: rgb(245, 246, 255);
+        margin-right: 3%;
+        margin-left: 0%;
+        margin-top: 205%;
+        text-align: center;
+        font-size: 100%;
+    }
+    #txtCorpo{
+        font-family: 'Roboto Mono', monospace;
+        position: absolute;
+        margin-left: 20%;
+        margin-right: 5%;
+        margin-top: 280%;
+        font-size: 100%;
+        text-align: right;
+    }
+    #droneFundo{
+        display: none;
+    }
+    #paisagem{
+        display: none;
+    }
+    .redes{
+        width: 20px;
+        height: 20px;
+      }
+    footer{
+        margin-top: 560%;
+        margin-left: 35% 
+      }
+}

@@ -1,0 +1,46 @@
+.cabecalho{
+    border-style: solid;
+    color: transparent;
+    margin-bottom: 3%;
+}
+
+.logo{
+    max-width: 3%;
+    display: inline;
+}
+
+.logoTxt{
+    color: #ff3c35;
+    font-family: 'Chivo', sans-serif;
+    font-weight: revert;
+    font-size: 160%;
+    display: inline;
+}
+.sect1{
+    background-image: url("../imagens/london.jpg");
+    max-width: min-content;
+}
+.selection{
+    background-color: aliceblue;
+}
+.flight{
+    position: relative;
+    display: inline;
+    padding-left: 250%;
+    padding-right: 250%;
+    background-color: #ff3c35;
+    color: aliceblue;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.hotel{
+    position: relative;
+    margin-left: 575%;
+    display: inline;
+    padding-left: 250%;
+    padding-right: 250%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-color: #111111;
+    color: aliceblue;
+}
